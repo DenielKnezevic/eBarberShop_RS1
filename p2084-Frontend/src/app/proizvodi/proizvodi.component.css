@@ -1,0 +1,11 @@
+.proizvodi{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color: white;
+  height: 800px;
+  padding-top: 4%;
+}
+.thcenter{
+  text-align: center;
+}

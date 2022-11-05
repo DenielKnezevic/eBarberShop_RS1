@@ -1,0 +1,21 @@
+<div>
+  <h3 mat-dialog-title>PROIZVOD</h3>
+  <mat-dialog-content class="example-container">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Grad</mat-label>
+      <input matInput [(ngModel)]="data.grad">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Drzava</mat-label>
+      <input matInput [(ngModel)]="data.drzava">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Adresa</mat-label>
+      <input matInput [(ngModel)]="data.adresa">
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions class="buttons">
+    <button mat-raised-button mat-dialog-close="">Close</button>
+    <button mat-raised-button style="background-color: #3d3d3d;color: white" (click)="Save()">Save</button>
+  </mat-dialog-actions>
+</div>

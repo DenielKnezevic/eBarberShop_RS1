@@ -1,0 +1,47 @@
+<div class="filter">
+  <div class="dugmad">
+    <p class="fixed">SEARCH</p>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Search po nazivu</mat-label>
+      <input matInput placeholder="Unesi naziv" [(ngModel)]="search.Naziv">
+    </mat-form-field>
+    <p class="fixed">FILTERI</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Sortiraj po</mat-label>
+      <mat-select  [(ngModel)]="search.ComboBoxSearch">
+        <mat-option *ngFor="let list of listSort" [value]="list.value">
+          {{list.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p class="fixed">DOBAVLJACI</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Odaberi dobavljaca</mat-label>
+      <mat-select  [(ngModel)]="search.DobavljacSearch">
+        <mat-option [value]="0">Svi dobavljaci</mat-option>
+        <mat-option *ngFor="let list of listDobavljaci" [value]="list.id">
+          {{list.nazivDobavljaca}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button (click)="Filtriraj()">Pretraga</button>
+  </div>
+
+</div>
+<div class="ponuda">
+  <mat-grid-list cols="4"rowHeight="400px">
+    <mat-grid-tile *ngFor="let x of obs | async"><mat-card class="example-card">
+      <img mat-card-image src="{{x.slika}}" alt="Photo of a Shiba Inu" style="height: 150px">
+      <mat-card-content>
+        <p style="font-size: 12px">
+          {{x.opis}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions style="margin-top:10px">
+        <div style="display: flex ; justify-content: center"><button mat-raised-button style="width: 90%;margin-bottom: 5px;" color="accent">BUY</button></div>
+      </mat-card-actions>
+    </mat-card></mat-grid-tile>
+
+  </mat-grid-list>
+  <mat-paginator style="position: relative" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
