@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frizerski_Salon", "Frizerski_Salon\Frizerski_Salon.csproj", "{10DC2E13-A29F-4391-8628-60BEF8DFC79D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{027CD57B-94E2-4F50-B8CF-7C2710D320EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10DC2E13-A29F-4391-8628-60BEF8DFC79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DC2E13-A29F-4391-8628-60BEF8DFC79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DC2E13-A29F-4391-8628-60BEF8DFC79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DC2E13-A29F-4391-8628-60BEF8DFC79D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{027CD57B-94E2-4F50-B8CF-7C2710D320EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027CD57B-94E2-4F50-B8CF-7C2710D320EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027CD57B-94E2-4F50-B8CF-7C2710D320EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027CD57B-94E2-4F50-B8CF-7C2710D320EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53198F86-0C66-40A8-96CF-44773ABB9C6B}
+	EndGlobalSection
+EndGlobal

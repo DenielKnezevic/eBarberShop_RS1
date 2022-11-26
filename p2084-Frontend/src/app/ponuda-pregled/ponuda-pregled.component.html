@@ -1,0 +1,43 @@
+<div class="filter">
+  <div class="dugmad">
+    <p class="fixed">FILTERI</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Pretraga po zaposleniku</mat-label>
+      <mat-select  [(ngModel)]="search.ZaposlenikID">
+        <mat-option [value]="0">Svi zaposlenici</mat-option>
+        <mat-option *ngFor="let list of listZaposlenik" [value]="list.id">
+          {{list.ime}} {{list.prezime}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Pretraga po lokacijama</mat-label>
+      <mat-select  [(ngModel)]="search.LokacijaID">
+        <mat-option [value]="0">Sve lokacije</mat-option>
+        <mat-option *ngFor="let list of listLokacije" [value]="list.id">
+          {{list.grad}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p class="fixed">DATUM</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Odaberi datum</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="search.Datum">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button (click)="Filtriraj()">Pretraga</button>
+  </div>
+
+</div>
+<div class="ponuda">
+<div class="termini">
+  <mat-card *ngFor="let x of obs | async">
+    <mat-card-title>{{x.datumTermina | date : 'dd MMM yyyy'}}</mat-card-title>
+    <mat-card-subtitle style="font-weight: bold">Termin kod: {{x.zaposlenik.ime}} {{x.zaposlenik.prezime}} <br> {{x.lokacija.drzava}}-{{x.lokacija.grad}}<br> <p style="font-size: 22px;margin-top:1%">{{x.vrijemeTermina}}</p></mat-card-subtitle>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="accent">REZERVISI</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>

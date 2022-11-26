@@ -1,0 +1,47 @@
+<div>
+  <h3 mat-dialog-title>TERMIN</h3>
+  <form [formGroup]="profileForm" autocomplete="off">
+    <mat-dialog-content class="example-container">
+      <mat-form-field hideRequiredMarker="true" appearance="fill" class="example-form-field">
+        <mat-label>Datum termina</mat-label>
+        <input formControlName="datum" matInput [matDatepicker]="datepicker" [(ngModel)]="data.datumTermina">
+        <mat-hint style="color: red" *ngIf="profileForm.get('datum').touched && profileForm.get('datum').errors?.['required']">Ovo polje je obavezno</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancel</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+      <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+        <mat-label>Vrijeme termina</mat-label>
+        <input formControlName="vrijemeTermina" matInput [(ngModel)]="data.vrijemeTermina">
+        <mat-hint style="color: red" *ngIf="profileForm.get('vrijemeTermina').touched && profileForm.get('vrijemeTermina').errors?.['required']">Ovo polje je obavezno</mat-hint>
+        <mat-hint style="color: red" *ngIf="profileForm.get('vrijemeTermina').errors?.['rangeLength']">Ovo polje mora imati minimalno 5 karaktera</mat-hint>
+      </mat-form-field>
+      <mat-form-field hideRequiredMarker="true" appearance="fill">
+        <mat-label>Zaposlenik</mat-label>
+        <mat-select formControlName="zaposlenik" [(ngModel)]="data.zaposlenikID">
+          <mat-option *ngFor="let x of list" [value]="x.id">
+            {{x.ime}} {{x.prezime}}
+          </mat-option>
+        </mat-select>
+        <mat-hint style="color: red" *ngIf="profileForm.get('zaposlenik').touched && profileForm.get('zaposlenik').errors?.['required']">Ovo polje je obavezno</mat-hint>
+      </mat-form-field>
+      <mat-form-field hideRequiredMarker="true" appearance="fill">
+        <mat-label>Lokacija</mat-label>
+        <mat-select formControlName="lokacija" [(ngModel)]="data.lokacijaID">
+          <mat-option *ngFor="let x of listLokacije" [value]="x.id">
+            {{x.grad}}
+          </mat-option>
+        </mat-select>
+        <mat-hint style="color: red" *ngIf="profileForm.get('lokacija').touched && profileForm.get('lokacija').errors?.['required']">Ovo polje je obavezno</mat-hint>
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="buttons">
+      <button mat-raised-button mat-dialog-close="">Close</button>
+      <button mat-raised-button style="background-color: #3d3d3d;color: white" (click)="Save()">Save</button>
+    </mat-dialog-actions>
+  </form>
+</div>

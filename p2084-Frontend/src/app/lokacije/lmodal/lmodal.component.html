@@ -1,0 +1,29 @@
+<div>
+  <h3 mat-dialog-title>PROIZVOD</h3>
+  <form [formGroup]="profileForm" autocomplete="off">
+    <mat-dialog-content class="example-container">
+      <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+        <mat-label>Grad</mat-label>
+        <input formControlName="grad" matInput [(ngModel)]="data.grad">
+        <mat-hint style="color: red" *ngIf="profileForm.get('grad').touched && profileForm.get('grad').errors?.['required']">Ovo polje je obavezno</mat-hint>
+        <mat-hint style="color: red" *ngIf="profileForm.get('grad').errors?.['minlength']">Ovo mora imati minimalno 3 karaktera</mat-hint>
+      </mat-form-field>
+      <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+        <mat-label>Drzava</mat-label>
+        <input formControlName="drzava" matInput [(ngModel)]="data.drzava">
+        <mat-hint style="color: red" *ngIf="profileForm.get('drzava').touched && profileForm.get('drzava').errors?.['required']">Ovo polje je obavezno</mat-hint>
+        <mat-hint style="color: red" *ngIf="profileForm.get('drzava').errors?.['minlength']">Ovo mora imati minimalno 3 karaktera</mat-hint>
+      </mat-form-field>
+      <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+        <mat-label>Adresa</mat-label>
+        <input formControlName="adresa" matInput [(ngModel)]="data.adresa">
+        <mat-hint style="color: red" *ngIf="profileForm.get('adresa').touched && profileForm.get('adresa').errors?.['required']">Ovo polje je obavezno</mat-hint>
+        <mat-hint style="color: red" *ngIf="profileForm.get('adresa').errors?.['minlength']">Ovo mora imati minimalno 5 karaktera</mat-hint>
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="buttons">
+      <button mat-raised-button mat-dialog-close="">Close</button>
+      <button mat-raised-button style="background-color: #3d3d3d;color: white" (click)="Save()">Save</button>
+    </mat-dialog-actions>
+  </form>
+</div>

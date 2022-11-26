@@ -1,0 +1,57 @@
+.slika{
+  background-image: url("https://i.imgur.com/asnvNBq.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
+  position: absolute;
+}
+.glavni{
+  height: 85%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login{
+  width: 400px;
+  height:400px;
+  background-color: white;
+  border-radius: 3px;
+}
+.inputs{
+  height: 80%;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  font-weight: bold;
+  text-align: center;
+  margin-top:10%
+}
+mat-form-field{
+  width: 70%;
+}
+button{
+  width: 70%;
+  margin-top:10%;
+  text-align: center;
+  background-color: #383838;
+  color:white;
+}
+p a{
+  color: blue;
+  cursor: pointer;
+}
+
+p a:hover{
+  color:blue;
+  text-decoration: none;
+}
+
