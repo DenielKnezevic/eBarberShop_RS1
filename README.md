@@ -1,20 +1,20 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# eBarberShop_RS1
+In the collaborative development of the web app, my primary responsibility focused on creating the admin panel using Angular. Specifically, my contributions include:
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+- Admin Panel: I developed an intuitive and user-friendly admin panel that allows efficient management of key aspects of the barbershop business.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+- Employee Management: Within the admin panel, I implemented a feature to add and manage employees, enabling the barbershop to easily keep track of its staff members.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+- Product Management: I integrated a functionality to add and manage products within the admin panel. This enables the barbershop to update and showcase their offerings effectively.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- Location Management: I incorporated a location management feature, allowing the admin to add and maintain various barbershop locations.
+
+- Service Management: I implemented a service management feature that enables the admin to add and update the services provided by the barbershop. This ensures that customers are well-informed about the available services.
+
+- SignalR Chart: As part of my contribution, I developed a SignalR service that provides a dynamic chart. This chart displays the count of objects such as employees, products, locations, and services, allowing the admin to have a real-time overview of the barbershop's offerings.
+
+- Product Page: I designed and implemented a page where customers can view the available products. The page includes multiple search options to enhance the user experience and make it easier for customers to find their desired products.
+
+- Services Page: I created a dedicated page that showcases the various services provided by the barbershop. This page provides essential information for customers, helping them make informed decisions.
+
+With my contributions to the admin panel, dynamic chart, product page, and services page, I aimed to enhance the usability and functionality of the web app, ultimately contributing to a seamless experience for both administrators and customers.
